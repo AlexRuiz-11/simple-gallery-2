@@ -1,4 +1,4 @@
-# SIMPLE-GALLERY-2
+# SIMPLE GALLERY 2
 
 <a name="readme-top"></a>
 
@@ -39,7 +39,7 @@ A continuación enumero una lista de las funciones que se deberían añadir a la
 Lista de webs de gallerias:
 
 - [Home Gallery](https://github.com/xemle/home-gallery)
-- [Light Gallery](https://github.com/xemle/sachinchoolur/lightGallery)
+- [Light Gallery](https://github.com/sachinchoolur/lightGallery)
 - [Photo Swipe](https://github.com/dimsemenov/photoswipe)
 
 
