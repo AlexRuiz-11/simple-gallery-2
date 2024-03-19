@@ -1,17 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
     const galleryContainer = document.getElementById("gallery");
     const infoContainer = document.getElementById("image-info");
+    let cont; // Definir la constante para almacenar el valor de la primera columna y segunda fila
 
     fetch("urls.csv") // Ruta del archivo CSV
         .then(response => response.text())
         .then(data => {
-            const rows = data.trim().split('\n').slice(1); // Omitir la primera fila (cabecera)
+            const rows = data.trim().split('\n');
 
-            const imagesInfo = rows.map(row => {
+            // Obtener el valor de la primera columna y segunda fila del CSV
+            const firstRowColumns = rows[1].split(';');
+            cont = firstRowColumns[0]; // Valor de la primera columna y fila
+
+            // Mostrar el valor de cont en el elemento HTML
+            document.getElementById("imagesCont").textContent = cont;
+
+            // Omitir la primera fila (cabecera) y procesar la información de las imágenes
+            const imagesInfo = rows.slice(1).map(row => {
                 const columns = row.split(';');
                 return {
                     url: "https://i.imgur.com/" + columns[1],
-                    info: columns[2]
+                    number: columns[0], // Columna 0: Número de imagen
+                    title: columns[2], // Columna 2: Título de la imagen
+                    description: columns[3], // Columna 3: Descripción de la imagen
+                    tags: columns[4], // Columna 4: Etiquetas de la imagen
+                    location: columns[5] // Columna 5: Ubicación de la imagen
                 };
             });
 
@@ -28,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             imgElement.src = imageInfo.url;
 
             imgElement.addEventListener("click", function () {
-                showFullscreenImage(imgElement.src, imageInfo.info);
+                showFullscreenImage(imgElement.src, imageInfo);
             });
 
             imgContainer.appendChild(imgElement);
@@ -45,14 +58,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
         fullscreenImage.addEventListener("click", function () {
             fullscreenContainer.remove();
-            infoContainer.classList.add("hidden"); // Ocultar la barra de información al cerrar la imagen
-            infoContainer.innerHTML = ''; // Limpiar la información al cerrar la imagen
+            // Limpiar la información al cerrar la imagen
+            infoContainer.innerHTML = '';
+            // Ocultar la barra lateral al cerrar la imagen
+            infoContainer.classList.add("hidden");
         });
 
         fullscreenContainer.appendChild(fullscreenImage);
         document.body.appendChild(fullscreenContainer);
 
-        infoContainer.innerHTML = info; // Mostrar la información
-        infoContainer.classList.remove("hidden"); // Mostrar la barra de información
+        displayImageInfo(info);
     }
+
+    function displayImageInfo(info) {
+        // Mostrar la información de la imagen en la barra lateral
+        document.getElementById("number").textContent = info.number;
+        document.getElementById("title").textContent = info.title;
+        document.getElementById("description").textContent = info.description;
+        document.getElementById("tags").textContent = info.tags;
+        document.getElementById("location").textContent = info.location;
+
+        // Mostrar y actualizar la barra de información lateral
+        infoContainer.classList.remove("hidden");
+    }
+
+
+
 });
