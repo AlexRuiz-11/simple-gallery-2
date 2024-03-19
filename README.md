@@ -1,5 +1,3 @@
-# SIMPLE GALLERY 2
-
 <a name="readme-top"></a>
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -9,15 +7,16 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
+# SIMPLE GALLERY 2
 
 <!-- PROJECT DESCRIPTION -->
-# Galería de fotos online
+## Descripción
 
 Esto es una evolución del proyecto creado con `php` llamado [Simple Gallery](https://github.com/AlexRuiz-11/simple_gallery). Incorpora la web [imgur](https://imgur.com/) como nueva fuente para el alamacenaje de contenido multimedia.
 
 
 <!-- PROPUESTAS DE CAMBIOS PARA PRs -->
-# Propuestas
+## Propuestas
 A continuación enumero una lista de las funciones que se deberían añadir a la web:
 
  - Contador de Numero de imagenes totales. Utilizar la primera columna del `.csv`.
@@ -35,8 +34,8 @@ A continuación enumero una lista de las funciones que se deberían añadir a la
 
 
 <!-- EJEMPLOS -->
-# Ejemplos
-Lista de webs de gallerías:
+## Ejemplos
+Lista de webs de gallerías con propuestas parecidas:
 
 - [Home Gallery](https://github.com/xemle/home-gallery)
 - [Light Gallery](https://github.com/sachinchoolur/lightGallery)
