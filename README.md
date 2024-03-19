@@ -13,14 +13,14 @@
 <!-- PROJECT DESCRIPTION -->
 # Galería de fotos online
 
-Esto es una evolución del proyecto creado con 'php' llamado [Simple Gallery](https://github.com/AlexRuiz-11/simple_gallery). Incorpora la web [imgur](https://imgur.com/) como nueva fuente para el alamacenaje de contenido multimedia.
+Esto es una evolución del proyecto creado con `php` llamado [Simple Gallery](https://github.com/AlexRuiz-11/simple_gallery). Incorpora la web [imgur](https://imgur.com/) como nueva fuente para el alamacenaje de contenido multimedia.
 
 
 <!-- PROPUESTAS DE CAMBIOS PARA PRs -->
 # Propuestas
 A continuación enumero una lista de las funciones que se deberían añadir a la web:
 
- - Contador de Numero de imagenes totales. Utilizar la primera columna del '.csv'.
+ - Contador de Numero de imagenes totales. Utilizar la primera columna del `.csv`.
  - Botones de nevegacion al visualizar una imagen. (siguiente, anterior, Zoom, Salir, descargar, info).
  - Informacion de cada imagen:
 	 - Título. 
@@ -29,14 +29,14 @@ A continuación enumero una lista de las funciones que se deberían añadir a la
 	 - Ubicación.
 	 - Fuente.
 
- - Ordenar las imagenes. Últimas añadidas primero. Utilizar el número del '.csv'.
+ - Ordenar las imagenes. Últimas añadidas primero. Utilizar el número del `.csv`.
  - Filtros i/o barra de busqueda: #Hashtags, palabras calve, ubicación.
  - Añadir visualizacion para videos.
 
 
 <!-- EJEMPLOS -->
 # Ejemplos
-Lista de webs de gallerias:
+Lista de webs de gallerías:
 
 - [Home Gallery](https://github.com/xemle/home-gallery)
 - [Light Gallery](https://github.com/sachinchoolur/lightGallery)
