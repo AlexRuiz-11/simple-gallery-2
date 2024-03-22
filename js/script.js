@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const imagesInfo = rows.slice(1).map(row => {
                 const columns = row.split(';');
                 return {
-                    url: "https://i.imgur.com/" + columns[1],
+                    url: columns[1],
                     number: columns[0], // Columna 0: Número de imagen
                     title: columns[2], // Columna 2: Título de la imagen
                     description: columns[3], // Columna 3: Descripción de la imagen
