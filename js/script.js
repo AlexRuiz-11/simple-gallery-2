@@ -24,7 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     title: columns[2], // Columna 2: Título de la imagen
                     description: columns[3], // Columna 3: Descripción de la imagen
                     tags: columns[4], // Columna 4: Etiquetas de la imagen
-                    location: columns[5] // Columna 5: Ubicación de la imagen
+                    team: columns[5], // Columna 5: Ubicación de la imagen
+                    year: columns[6],
+                    location: columns[7],
+                    source: columns[8]
                 };
             });
 
@@ -76,7 +79,10 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("title").textContent = info.title;
         document.getElementById("description").textContent = info.description;
         document.getElementById("tags").textContent = info.tags;
+        document.getElementById("team").textContent = info.team;
+        document.getElementById("year").textContent = info.year;
         document.getElementById("location").textContent = info.location;
+        document.getElementById("source").textContent = info.source;
 
         // Mostrar y actualizar la barra de información lateral
         infoContainer.classList.remove("hidden");

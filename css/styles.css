@@ -79,19 +79,24 @@ h1 {
     color: white;
 }
 
+#image-info p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    display: flex; 
+}
+
+#image-info strong {
+    font-weight: bold;
+}
+
+#image-info img {
+    width: 20px; 
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 .hidden {
     transform: translateX(100%);
-}
-
-/* Estilos para el título de la información */
-#image-info h2 {
-    font-size: 20px; 
-    font-weight: bold; 
-    margin-bottom: 6px; 
-}
-
-/* Estilos para la información de la imagen */
-#image-info p {
-    font-size: 18px; 
-    margin-bottom: 3px; 
 }
